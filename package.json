@@ -1,18 +1,15 @@
 {
-  "name": "portfolio",
+  "name": "margaret-creative-portfolio",
+  "version": "1.0.0",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.17",
-    "astro": "^6.4.8",
-    "tailwindcss": "^4.1.17"
-  },
-  "overrides": {
-    "vite": "^7"
+    "@tailwindcss/vite": "^4.1.0",
+    "astro": "^6.0.0",
+    "tailwindcss": "^4.1.0"
   }
 }

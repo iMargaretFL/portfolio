@@ -1,14 +1,61 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+:root {
+  --paper: #f4efe7;
+  --ink: #171614;
+  --muted: #706b63;
+  --line: rgba(23, 22, 20, 0.16);
+  --accent: #d44926;
+  --accent-deep: #ab351f;
+  --dark: #171513;
 }
 
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+::selection { background: #f2b7a7; color: var(--ink); }
+
+.font-display { font-family: "Playfair Display", Georgia, serif; }
+
+.hero-wash {
+  background:
+    radial-gradient(circle at 80% 5%, rgba(231, 197, 123, .47), transparent 24%),
+    radial-gradient(circle at 20% 75%, rgba(212, 73, 38, .18), transparent 34%),
+    linear-gradient(130deg, rgba(255,255,255,.45), rgba(255,255,255,.07));
 }
 
-.font-display {
-  font-family: "Playfair Display", serif;
+.thumb-campaign {
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.6), rgba(255,255,255,0)),
+    linear-gradient(140deg, #f39067 0%, #f7e8d4 49%, #c9d6ba 100%);
+}
+.thumb-brand {
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.11), rgba(255,255,255,0)),
+    linear-gradient(140deg, #181613 0%, #594033 56%, #d44926 100%);
+}
+.thumb-web {
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.42), rgba(255,255,255,0)),
+    linear-gradient(140deg, #b6cad7, #f5eee5 50%, #e9a179);
+}
+.thumb-print {
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.5), rgba(255,255,255,0)),
+    linear-gradient(140deg, #d5e0c8, #f1dfc6 52%, #c6ad9b);
+}
+
+.scroll-row {
+  animation: scroll-row 26s linear infinite;
+}
+@keyframes scroll-row {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-row { animation: none; }
 }
