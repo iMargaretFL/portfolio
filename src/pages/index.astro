@@ -21,36 +21,52 @@ const projects = [
     no: "01",
     title: "Campaign Creative",
     type: "Advertising · Digital · Social",
-    description: "High-impact creative systems for launches, paid media, seasonal campaigns, and social content.",
+    description:
+      "High-impact creative systems for launches, paid media, seasonal campaigns, and social content.",
     tone: "thumb-campaign",
+    href: "/work/campaign-creative/",
   },
   {
     no: "02",
     title: "Brand Worlds",
     type: "Identity · Art Direction",
-    description: "Distinct visual identities that make brands easier to recognize, trust, and remember.",
+    description:
+      "Distinct visual identities that make brands easier to recognize, trust, and remember.",
     tone: "thumb-brand",
+    href: "/work/brand-worlds/",
   },
   {
     no: "03",
     title: "Landing Experiences",
     type: "Web Design · Conversion",
-    description: "Editorial landing pages that align visual hierarchy, messaging, and campaign goals.",
+    description:
+      "Editorial landing pages that align visual hierarchy, messaging, and campaign goals.",
     tone: "thumb-web",
+    href: "/work/landing-experiences/",
   },
   {
     no: "04",
     title: "Packaging & Print",
     type: "Packaging · Presentation · Print",
-    description: "Tangible assets that bring a product story to life in the real world.",
+    description:
+      "Tangible assets that bring a product story to life in the real world.",
     tone: "thumb-print",
+    href: "/work/packaging-print/",
   },
 ];
 
 const toolset = [
-  "Adobe Photoshop", "Illustrator", "InDesign", "Figma",
-  "Lightroom", "After Effects", "Canva", "PowerPoint",
-  "Keynote", "ChatGPT", "Midjourney", "Google Workspace"
+  { name: "Adobe Photoshop", icon: "/icons/photoshop-ps.png" },
+  { name: "Illustrator", icon: "/icons/illustrator-ai.png" },
+  { name: "InDesign", icon: "/icons/indesign-id.png" },
+  { name: "Figma", icon: "/icons/figma.png" },
+  { name: "After Effects", icon: "/icons/after-effects-ae.png" },
+  { name: "Premiere Pro", icon: "/icons/premiere-pro-pr.png" },
+  { name: "Midjourney", icon: "/icons/midjourney.svg" },
+  { name: "ChatGPT", icon: "/icons/chat-gpt.svg" },
+  { name: "Claude", icon: "/icons/cloude.svg" },
+  { name: "HTML", icon: "/icons/html-icon.svg" },
+  { name: "CSS", icon: "/icons/css-icon.svg" },
 ];
 ---
 
@@ -58,25 +74,86 @@ const toolset = [
   <main id="top">
     <header class="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--paper)]/90 backdrop-blur">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <a href="#top" class="font-display text-2xl font-semibold tracking-[-0.04em]">
+        <a
+          href="#top"
+          class="font-display text-2xl font-semibold tracking-[-0.04em]"
+        >
           Margaret Bus<span class="text-[var(--accent)]">.</span>
         </a>
 
         <nav class="hidden items-center gap-7 text-xs font-bold uppercase tracking-[0.17em] text-[var(--muted)] lg:flex">
           <a href="#about" class="transition hover:text-[var(--ink)]">About</a>
           <a href="#work" class="transition hover:text-[var(--ink)]">Work</a>
-          <a href="#experiments" class="transition hover:text-[var(--ink)]">Experiments</a>
+          <a href="#experiments" class="transition hover:text-[var(--ink)]">
+            Experiments
+          </a>
           <a href="#tools" class="transition hover:text-[var(--ink)]">Tools</a>
         </nav>
 
-        <a href="#contact" class="rounded-full bg-[var(--ink)] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:bg-[var(--accent)]">
+        <a
+          href="#contact"
+          class="rounded-full bg-[var(--ink)] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:bg-[var(--accent)]"
+        >
           Let’s talk
         </a>
       </div>
     </header>
 
-    <section class="hero-wash border-b border-[var(--line)]">
-      <div class="mx-auto grid min-h-[78vh] max-w-7xl items-end px-5 pb-12 pt-24 md:px-8 md:pb-16 lg:grid-cols-[1fr_0.42fr] lg:gap-16">
+    <section class="hero-wash relative overflow-hidden border-b border-[var(--line)]">
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 z-20 overflow-hidden"
+      >
+        <div class="icon-shell icon-pos-1" data-parallax="0.022">
+          <img
+            src="/icons/figma.png"
+            alt=""
+            class="design-icon icon-float-1"
+          />
+        </div>
+
+        <div class="icon-shell icon-pos-2" data-parallax="-0.018">
+          <img
+            src="/icons/illustrator-ai.png"
+            alt=""
+            class="design-icon icon-float-2"
+          />
+        </div>
+
+        <div class="icon-shell icon-pos-3" data-parallax="0.014">
+          <img
+            src="/icons/photoshop-ps.png"
+            alt=""
+            class="design-icon icon-float-3"
+          />
+        </div>
+
+        <div class="icon-shell icon-pos-4 hidden md:block" data-parallax="-0.024">
+          <img
+            src="/icons/after-effects-ae.png"
+            alt=""
+            class="design-icon icon-float-4"
+          />
+        </div>
+
+        <div class="icon-shell icon-pos-5" data-parallax="0.017">
+          <img
+            src="/icons/indesign-id.png"
+            alt=""
+            class="design-icon icon-float-5"
+          />
+        </div>
+
+        <div class="icon-shell icon-pos-6 hidden md:block" data-parallax="-0.015">
+          <img
+            src="/icons/premiere-pro-pr.png"
+            alt=""
+            class="design-icon icon-float-6"
+          />
+        </div>
+      </div>
+
+      <div class="relative z-10 mx-auto grid min-h-[78vh] max-w-7xl items-end px-5 pb-12 pt-14 md:px-8 md:pb-16 md:pt-16 lg:grid-cols-[1fr_0.42fr] lg:gap-16">
         <div>
           <p class="mb-7 text-xs font-bold uppercase tracking-[0.22em] text-[var(--accent)]">
             Senior Graphic Designer
@@ -89,19 +166,32 @@ const toolset = [
 
           <div class="mt-12 grid max-w-3xl gap-7 border-t border-[var(--line)] pt-6 md:grid-cols-[1.2fr_0.8fr]">
             <p class="text-lg leading-8 text-[var(--muted)]">
-              I create advertising graphics, brand identities, landing pages, presentations, packaging, and photography for businesses that need visual communication with real commercial purpose.
+              I create advertising graphics, brand identities, landing pages,
+              presentations, packaging, and photography for businesses that
+              need visual communication with real commercial purpose.
             </p>
 
-            <a href="#work" class="group inline-flex items-center gap-3 self-start text-sm font-bold uppercase tracking-[0.14em]">
+            <a
+              href="#work"
+              class="group inline-flex items-center gap-3 self-start text-sm font-bold uppercase tracking-[0.14em]"
+            >
               Explore selected work
-              <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--ink)] transition group-hover:bg-[var(--ink)] group-hover:text-white">↘</span>
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--ink)] transition group-hover:bg-[var(--ink)] group-hover:text-white">
+                ↘
+              </span>
             </a>
           </div>
         </div>
 
-        <aside class="mt-14 border-l border-[var(--line)] pl-6 lg:mt-0">
-          <p class="text-xs font-bold uppercase tracking-[0.18em] text-[var(--muted)]">Based in Florida</p>
-          <p class="font-display mt-4 text-4xl leading-none">A visual designer who makes clarity look desirable.</p>
+        <aside class="relative z-10 mt-14 border-l border-[var(--line)] pl-6 lg:mt-0">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-[var(--muted)]">
+            Based in Florida
+          </p>
+
+          <p class="font-display mt-4 text-4xl leading-none">
+            A visual designer who makes clarity look desirable.
+          </p>
+
           <div class="mt-8 space-y-3 text-sm text-[var(--muted)]">
             <p>Ads · Branding · Packaging</p>
             <p>Landing Pages · Presentations · Photography</p>
@@ -110,41 +200,35 @@ const toolset = [
       </div>
     </section>
 
-    <section class="overflow-hidden border-b border-[var(--line)] bg-[var(--dark)] py-4 text-[var(--paper)]">
-      <div class="scroll-row flex w-max gap-10 whitespace-nowrap text-xl font-bold uppercase tracking-[0.12em] md:text-2xl">
-        <span>Advertising Design</span><span class="text-[var(--accent)]">✳</span>
-        <span>Brand Identity</span><span class="text-[var(--accent)]">✳</span>
-        <span>Landing Pages</span><span class="text-[var(--accent)]">✳</span>
-        <span>Packaging</span><span class="text-[var(--accent)]">✳</span>
-        <span>Photography</span><span class="text-[var(--accent)]">✳</span>
-        <span>Advertising Design</span><span class="text-[var(--accent)]">✳</span>
-        <span>Brand Identity</span><span class="text-[var(--accent)]">✳</span>
-        <span>Landing Pages</span><span class="text-[var(--accent)]">✳</span>
-        <span>Packaging</span><span class="text-[var(--accent)]">✳</span>
-        <span>Photography</span><span class="text-[var(--accent)]">✳</span>
-      </div>
-    </section>
-
     <section id="about" class="border-b border-[var(--line)]">
       <div class="mx-auto grid max-w-7xl gap-12 px-5 py-24 md:px-8 lg:grid-cols-[0.72fr_1.28fr]">
         <div>
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">01 · About</p>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+            01 · About
+          </p>
+
           <h2 class="font-display mt-6 text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl">
-            A creative partner, not an order taker.
+            A visual designer who makes clarity look desirable.
           </h2>
         </div>
 
         <div class="pt-2">
           <p class="max-w-3xl text-2xl leading-[1.28] tracking-[-0.03em] md:text-3xl">
-            I help businesses turn ideas into clear, polished, and memorable visual systems across digital and print.
+            I help businesses turn ideas into clear, polished, and memorable
+            visual systems across digital and print.
           </p>
 
           <div class="mt-10 grid gap-8 md:grid-cols-2">
             <p class="leading-7 text-[var(--muted)]">
-              Great design is not decoration. It is how a brand earns attention, communicates value, and creates confidence at every customer touchpoint.
+              Great design is not decoration. It is how a brand earns
+              attention, communicates value, and creates confidence at every
+              customer touchpoint.
             </p>
+
             <p class="leading-7 text-[var(--muted)]">
-              My process combines strategy, visual direction, craft, and practical production so the work can perform in real campaigns, launches, and sales materials.
+              My process combines strategy, visual direction, craft, and
+              practical production so the work can perform in real campaigns,
+              launches, and sales materials.
             </p>
           </div>
         </div>
@@ -155,24 +239,32 @@ const toolset = [
       <div class="mx-auto max-w-7xl px-5 py-24 md:px-8">
         <div class="flex flex-col justify-between gap-7 md:flex-row md:items-end">
           <div>
-            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">02 · Expertise</p>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+              02 · Expertise
+            </p>
+
             <h2 class="font-display mt-5 text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl">
               Areas of specialisation.
             </h2>
           </div>
 
           <p class="max-w-sm leading-7 text-[var(--muted)]">
-            A flexible creative practice built for campaign work, growing brands, and teams that need consistent visual output.
+            A flexible creative practice built for campaign work, growing
+            brands, and teams that need consistent visual output.
           </p>
         </div>
 
         <div class="mt-14 grid border-l border-t border-[var(--line)] sm:grid-cols-2 lg:grid-cols-3">
-          {specialties.map((item, index) => (
-            <div class="flex min-h-28 items-end justify-between border-b border-r border-[var(--line)] p-5">
-              <span class="font-display text-2xl">{item}</span>
-              <span class="text-xs font-bold text-[var(--accent)]">{String(index + 1).padStart(2, "0")}</span>
-            </div>
-          ))}
+          {
+            specialties.map((item, index) => (
+              <div class="flex min-h-28 items-end justify-between border-b border-r border-[var(--line)] p-5">
+                <span class="font-display text-2xl">{item}</span>
+                <span class="text-xs font-bold text-[var(--accent)]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -181,42 +273,69 @@ const toolset = [
       <div class="mx-auto max-w-7xl px-5 py-24 md:px-8">
         <div class="grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
-            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">03 · Selected Work</p>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+              03 · Selected Work
+            </p>
+
             <h2 class="font-display mt-6 text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl">
               Work with a point of view.
             </h2>
           </div>
 
           <p class="max-w-xl self-end text-xl leading-8 text-[var(--muted)]">
-            Replace these abstract preview blocks with your real mockups, campaign creatives, photography, and brand case-study imagery.
+            Replace these abstract preview blocks with your real mockups,
+            campaign creatives, photography, and brand case-study imagery.
           </p>
         </div>
 
         <div class="mt-16 grid gap-8 md:grid-cols-2">
-          {projects.map((project) => (
-            <article class="group">
-              <div class={`relative aspect-[4/3] overflow-hidden border border-[var(--line)] ${project.tone}`}>
-                <span class="absolute left-5 top-5 rounded-full border border-black/15 bg-white/70 px-3 py-1 text-xs font-bold tracking-[0.12em]">{project.no}</span>
-                <div class="absolute inset-x-7 bottom-7 border border-white/30 bg-white/15 p-5 backdrop-blur-sm">
-                  <p class="text-xs font-bold uppercase tracking-[0.15em] text-black/60">{project.type}</p>
-                  <p class="font-display mt-2 text-3xl tracking-[-0.04em]">{project.title}</p>
-                </div>
-              </div>
+          {
+            projects.map((project) => (
+              <a href={project.href} class="group block">
+                <div
+                  class={`relative aspect-[4/3] overflow-hidden border border-[var(--line)] ${project.tone}`}
+                >
+                  <span class="absolute left-5 top-5 rounded-full border border-black/15 bg-white/70 px-3 py-1 text-xs font-bold tracking-[0.12em]">
+                    {project.no}
+                  </span>
 
-              <div class="mt-5 flex gap-5">
-                <p class="max-w-md leading-7 text-[var(--muted)]">{project.description}</p>
-                <span class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--ink)] text-lg transition group-hover:bg-[var(--ink)] group-hover:text-white">↗</span>
-              </div>
-            </article>
-          ))}
+                  <div class="absolute inset-x-7 bottom-7 border border-white/30 bg-white/15 p-5 backdrop-blur-sm">
+                    <p class="text-xs font-bold uppercase tracking-[0.15em] text-black/60">
+                      {project.type}
+                    </p>
+
+                    <p class="font-display mt-2 text-3xl tracking-[-0.04em]">
+                      {project.title}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-5 flex gap-5">
+                  <p class="max-w-md leading-7 text-[var(--muted)]">
+                    {project.description}
+                  </p>
+
+                  <span class="ml-auto inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--ink)] text-lg transition group-hover:bg-[var(--ink)] group-hover:text-white">
+                    ↗
+                  </span>
+                </div>
+              </a>
+            ))
+          }
         </div>
       </div>
     </section>
 
-    <section id="experiments" class="border-b border-[var(--line)] bg-[var(--dark)] text-[var(--paper)]">
+    <section
+      id="experiments"
+      class="border-b border-[var(--line)] bg-[var(--dark)] text-[var(--paper)]"
+    >
       <div class="mx-auto grid max-w-7xl gap-12 px-5 py-24 md:px-8 lg:grid-cols-[0.72fr_1.28fr]">
         <div>
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#ef8b70]">04 · Experiments</p>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#ef8b70]">
+            04 · Experiments
+          </p>
+
           <h2 class="font-display mt-6 text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl">
             Ideas worth making visible.
           </h2>
@@ -224,21 +343,37 @@ const toolset = [
 
         <div>
           <p class="max-w-2xl text-xl leading-8 text-white/70">
-            Use this section for personal concepts, editorial poster series, photography projects, packaging explorations, or speculative brand work.
+            Use this section for personal concepts, editorial poster series,
+            photography projects, packaging explorations, or speculative brand
+            work.
           </p>
 
           <div class="mt-12 grid gap-px overflow-hidden border border-white/20 md:grid-cols-3">
             <div class="min-h-52 bg-[#c24125] p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.16em] text-white/65">01</p>
-              <p class="font-display mt-14 text-3xl leading-none">Poster<br />Studies</p>
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-white/65">
+                01
+              </p>
+              <p class="font-display mt-14 text-3xl leading-none">
+                Poster<br />Studies
+              </p>
             </div>
+
             <div class="min-h-52 bg-[#d8c9aa] p-6 text-[var(--ink)]">
-              <p class="text-xs font-bold uppercase tracking-[0.16em] text-black/55">02</p>
-              <p class="font-display mt-14 text-3xl leading-none">Packaging<br />Concepts</p>
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-black/55">
+                02
+              </p>
+              <p class="font-display mt-14 text-3xl leading-none">
+                Packaging<br />Concepts
+              </p>
             </div>
+
             <div class="min-h-52 bg-[#5e7b71] p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.16em] text-white/65">03</p>
-              <p class="font-display mt-14 text-3xl leading-none">Photo<br />Stories</p>
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-white/65">
+                03
+              </p>
+              <p class="font-display mt-14 text-3xl leading-none">
+                Photo<br />Stories
+              </p>
             </div>
           </div>
         </div>
@@ -249,27 +384,46 @@ const toolset = [
       <div class="mx-auto max-w-7xl px-5 py-24 md:px-8">
         <div class="flex flex-col justify-between gap-7 md:flex-row md:items-end">
           <div>
-            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">05 · Toolset</p>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+              05 · Toolset
+            </p>
+
             <h2 class="font-display mt-5 text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl">
               The tools of the craft.
             </h2>
           </div>
+
           <p class="max-w-sm leading-7 text-[var(--muted)]">
-            Tools support the work. The real value is in the visual judgment, system thinking, and care behind every decision.
+            Tools support the work. The real value is in the visual judgment,
+            system thinking, and care behind every decision.
           </p>
         </div>
 
-        <div class="mt-14 flex flex-wrap gap-x-8 gap-y-5">
-          {toolset.map((tool) => (
-            <span class="font-display text-2xl tracking-[-0.03em] text-[var(--ink)]">{tool}</span>
-          ))}
+        <div class="mt-14 grid grid-cols-2 gap-x-5 gap-y-7 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {
+            toolset.map((tool) => (
+              <div class="group flex items-center gap-3 border-b border-[var(--line)] pb-4">
+                <img
+                  src={tool.icon}
+                  alt=""
+                  class="h-8 w-8 shrink-0 object-contain transition duration-300 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <span class="font-display text-xl tracking-[-0.03em] text-[var(--ink)]">
+                  {tool.name}
+                </span>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
 
     <section id="contact" class="bg-[var(--accent)] text-white">
       <div class="mx-auto grid max-w-7xl gap-12 px-5 py-24 md:px-8 lg:grid-cols-[0.75fr_1.25fr]">
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/70">06 · Let’s Talk</p>
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
+          06 · Let’s Talk
+        </p>
 
         <div>
           <h2 class="font-display max-w-4xl text-6xl leading-[0.88] tracking-[-0.06em] md:text-8xl">
@@ -277,14 +431,23 @@ const toolset = [
           </h2>
 
           <p class="mt-8 max-w-2xl text-lg leading-8 text-white/80">
-            Available for advertising design, branding, landing pages, presentations, packaging, photography, and ongoing creative support.
+            Available for advertising design, branding, landing pages,
+            presentations, packaging, photography, and ongoing creative
+            support.
           </p>
 
           <div class="mt-12 flex flex-wrap gap-4">
-            <a href="mailto:hello@example.com" class="rounded-full bg-white px-6 py-3 text-sm font-bold uppercase tracking-[0.13em] text-[var(--ink)] transition hover:bg-[var(--dark)] hover:text-white">
+            <a
+              href="mailto:hello@example.com"
+              class="rounded-full bg-white px-6 py-3 text-sm font-bold uppercase tracking-[0.13em] text-[var(--ink)] transition hover:bg-[var(--dark)] hover:text-white"
+            >
               hello@example.com
             </a>
-            <a href="#" class="rounded-full border border-white/60 px-6 py-3 text-sm font-bold uppercase tracking-[0.13em] transition hover:bg-white hover:text-[var(--ink)]">
+
+            <a
+              href="#"
+              class="rounded-full border border-white/60 px-6 py-3 text-sm font-bold uppercase tracking-[0.13em] transition hover:bg-white hover:text-[var(--ink)]"
+            >
               LinkedIn
             </a>
           </div>
@@ -295,8 +458,63 @@ const toolset = [
     <footer class="bg-[var(--dark)] px-5 py-7 text-sm text-white/60 md:px-8">
       <div class="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <p>© 2026 Margaret Bus. All rights reserved.</p>
-        <a href="#top" class="font-bold uppercase tracking-[0.14em] text-white transition hover:text-[#ef8b70]">Back to top ↑</a>
+
+        <a
+          href="#top"
+          class="font-bold uppercase tracking-[0.14em] text-white transition hover:text-[#ef8b70]"
+        >
+          Back to top ↑
+        </a>
       </div>
     </footer>
   </main>
 </Layout>
+
+
+<script>
+  const hero = document.querySelector(".hero-wash");
+  const icons = [...document.querySelectorAll(".icon-shell[data-parallax]")];
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (hero && icons.length && !prefersReducedMotion) {
+    let currentOffsets = icons.map(() => 0);
+    let targetOffsets = icons.map(() => 0);
+    let frameId = 0;
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+    const setTargets = () => {
+      const heroTop = hero.getBoundingClientRect().top;
+      const scrollDistance = clamp(-heroTop, 0, 900);
+
+      targetOffsets = icons.map((icon) => {
+        const speed = Number(icon.dataset.parallax || 0);
+        return clamp(scrollDistance * speed, -18, 18);
+      });
+    };
+
+    const animate = () => {
+      currentOffsets = currentOffsets.map((current, index) => {
+        const next = current + (targetOffsets[index] - current) * 0.075;
+        icons[index].style.transform = `translateY(${next}px)`;
+        return next;
+      });
+
+      frameId = requestAnimationFrame(animate);
+    };
+
+    setTargets();
+    animate();
+
+    window.addEventListener("scroll", setTargets, { passive: true });
+    window.addEventListener("resize", setTargets, { passive: true });
+
+    window.addEventListener(
+      "pagehide",
+      () => cancelAnimationFrame(frameId),
+      { once: true }
+    );
+  }
+</script>

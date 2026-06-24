@@ -1,0 +1,108 @@
+---
+const icons = [
+  {
+    src: "/icons/figma.png",
+    alt: "Figma",
+    position: "left-[6%] top-[13%]",
+    depth: "0.10",
+    delay: "0",
+  },
+  {
+    src: "/icons/illustrator-ai.png",
+    alt: "Adobe Illustrator",
+    position: "left-[23%] top-[38%]",
+    depth: "0.18",
+    delay: "-1.8",
+  },
+  {
+    src: "/icons/photoshop-ps.png",
+    alt: "Adobe Photoshop",
+    position: "left-[9%] bottom-[16%]",
+    depth: "0.13",
+    delay: "-3.1",
+  },
+  {
+    src: "/icons/after-effects-ae.png",
+    alt: "Adobe After Effects",
+    position: "right-[27%] top-[8%]",
+    depth: "0.16",
+    delay: "-2.4",
+  },
+  {
+    src: "/icons/indesign-id.png",
+    alt: "Adobe InDesign",
+    position: "right-[7%] top-[30%]",
+    depth: "0.11",
+    delay: "-4.2",
+  },
+  {
+    src: "/icons/premiere-pro-pr.png",
+    alt: "Adobe Premiere Pro",
+    position: "right-[19%] bottom-[15%]",
+    depth: "0.20",
+    delay: "-1.1",
+  },
+];
+---
+
+<div
+  class="floating-icons-layer pointer-events-none absolute inset-0 z-20 overflow-hidden"
+  aria-hidden="true"
+>
+  {
+    icons.map((icon) => (
+      <div
+        class:list={[
+          "floating-icon-shell",
+          icon.position,
+          icon.alt === "Adobe After Effects" || icon.alt === "Adobe Premiere Pro"
+            ? "hidden md:block"
+            : "",
+        ]}
+        data-depth={icon.depth}
+      >
+        <img
+          src={icon.src}
+          alt=""
+          class="floating-icon-image"
+          style={`--float-delay: ${icon.delay}s;`}
+          loading="eager"
+        />
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  const layers = document.querySelectorAll(".floating-icons-layer");
+
+  layers.forEach((layer) => {
+    const icons = layer.querySelectorAll(".floating-icon-shell");
+
+    const moveIcons = (event: PointerEvent) => {
+      const rect = layer.getBoundingClientRect();
+
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+      icons.forEach((icon) => {
+        const depth = Number(icon.getAttribute("data-depth") || 0.1);
+
+        const moveX = x * depth * 80;
+        const moveY = y * depth * 80;
+
+        (icon as HTMLElement).style.transform =
+          `translate3d(${moveX}px, ${moveY}px, 0)`;
+      });
+    };
+
+    const resetIcons = () => {
+      icons.forEach((icon) => {
+        (icon as HTMLElement).style.transform = "translate3d(0, 0, 0)";
+      });
+    };
+
+    window.addEventListener("pointermove", moveIcons);
+    window.addEventListener("blur", resetIcons);
+  });
+</script>

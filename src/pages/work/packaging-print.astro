@@ -1,0 +1,98 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const project = {
+  number: "04",
+  eyebrow: "Packaging · Presentation · Print",
+  title: "Packaging & Print",
+  lead: "Tangible assets that bring a product story to life in the real world.",
+  goal: "Make the product feel intentional before it is even opened, while keeping every production detail practical and clear.",
+  role: "Packaging Design · Print Production · Presentation Design",
+};
+---
+
+<Layout>
+  <main>
+    <header class="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--paper)]/90 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+        <a href="/" class="font-display text-2xl font-semibold tracking-[-0.04em]">
+          Margaret Bus<span class="text-[var(--accent)]">.</span>
+        </a>
+        <a href="/#work" class="rounded-full border border-[var(--ink)] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] transition hover:bg-[var(--ink)] hover:text-white">All work</a>
+      </div>
+    </header>
+
+    <section class="bg-[#8e5a4e] border-b border-[var(--line)]">
+      <div class="mx-auto grid min-h-[66vh] max-w-7xl items-end gap-12 px-5 pb-12 pt-16 md:px-8 md:pb-16 lg:grid-cols-[1.25fr_0.75fr]">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#f1c4b8]">{project.number} · {project.eyebrow}</p>
+          <h1 class="font-display mt-6 max-w-5xl text-6xl leading-[0.86] tracking-[-0.07em] md:text-8xl">{project.title}</h1>
+          <p class="mt-8 max-w-2xl text-xl leading-8 text-black/70 md:text-2xl">{project.lead}</p>
+        </div>
+        <div class="border-l border-black/20 pl-6">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-black/50">Scope</p>
+          <p class="font-display mt-4 text-3xl leading-none">{project.role}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-[var(--line)]">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-[0.72fr_1.28fr]">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">The Brief</p>
+        <div>
+          <p class="font-display max-w-4xl text-4xl leading-[0.98] tracking-[-0.05em] md:text-6xl">{project.goal}</p>
+          <div class="mt-12 grid gap-8 border-t border-[var(--line)] pt-7 md:grid-cols-2">
+            <p class="leading-7 text-[var(--muted)]">Replace this text with the client context, the business problem, and the opportunity that shaped the creative direction.</p>
+            <p class="leading-7 text-[var(--muted)]">Add the strategic decisions, visual references, and practical constraints that helped define the finished work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-[var(--line)] bg-[#ebe3d7]">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">Selected Deliverables</p>
+            <h2 class="font-display mt-5 text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl">What was created.</h2>
+          </div>
+          <p class="max-w-sm leading-7 text-[var(--muted)]">Replace or expand this list to match the final scope of this project.</p>
+        </div>
+        <ul class="mt-14 grid border-l border-t border-[var(--line)] md:grid-cols-2">
+              <li class="border-b border-black/15 py-4">Packaging concept</li>
+              <li class="border-b border-black/15 py-4">Print-ready artwork</li>
+              <li class="border-b border-black/15 py-4">Presentation design</li>
+              <li class="border-b border-black/15 py-4">Production specs</li>
+              <li class="border-b border-black/15 py-4">Retail collateral</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="border-b border-[var(--line)]">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <div class="flex items-end justify-between gap-8">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">Visual Gallery</p>
+            <h2 class="font-display mt-5 text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl">Add the work here.</h2>
+          </div>
+          <p class="hidden max-w-sm leading-7 text-[var(--muted)] md:block">Replace these placeholders with real case-study images, mockups, videos, or final production files.</p>
+        </div>
+        <div class="mt-14 grid gap-5 md:grid-cols-2">
+          <div class="aspect-[4/3] border border-[var(--line)] bg-[#ddd4c7] p-6"><p class="text-xs font-bold uppercase tracking-[0.16em] text-black/45">Hero visual / mockup</p></div>
+          <div class="aspect-[4/3] border border-[var(--line)] bg-[#c6b8a2] p-6"><p class="text-xs font-bold uppercase tracking-[0.16em] text-black/45">Campaign detail</p></div>
+          <div class="aspect-[16/9] border border-[var(--line)] bg-[#8f7c6a] p-6 md:col-span-2"><p class="text-xs font-bold uppercase tracking-[0.16em] text-white/60">Full-width project image or video</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[var(--accent)] text-white">
+      <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-5 py-16 md:px-8 md:flex-row md:items-end">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/70">Next project</p>
+          <h2 class="font-display mt-4 text-5xl leading-[0.9] tracking-[-0.05em] md:text-7xl">Ready to make something useful?</h2>
+        </div>
+        <a href="/#contact" class="rounded-full bg-white px-6 py-3 text-sm font-bold uppercase tracking-[0.13em] text-[var(--ink)] transition hover:bg-[var(--dark)] hover:text-white">Let’s talk</a>
+      </div>
+    </section>
+  </main>
+</Layout>
